@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F1B37856-1799-44C4-B6E4-C23B4D551C87}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DescompressaoTeste02</RootNamespace>
+    <AssemblyName>DescompressaoTeste02</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Control\Conexao.cs" />
+    <Compile Include="Control\ManipularFuncionario.cs" />
+    <Compile Include="Control\ManipularReserva.cs" />
+    <Compile Include="Model\Funcionario.cs" />
+    <Compile Include="Model\Reserva.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\TelaAlterarMeusDados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaAlterarMeusDados.Designer.cs">
+      <DependentUpon>TelaAlterarMeusDados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaCadastrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaCadastrar.Designer.cs">
+      <DependentUpon>TelaCadastrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaCancelarAgendamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaCancelarAgendamento.Designer.cs">
+      <DependentUpon>TelaCancelarAgendamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaConsultarAgendamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaConsultarAgendamento.Designer.cs">
+      <DependentUpon>TelaConsultarAgendamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaEntrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaEntrar.Designer.cs">
+      <DependentUpon>TelaEntrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaFazerAgendamento2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaFazerAgendamento2.Designer.cs">
+      <DependentUpon>TelaFazerAgendamento2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaMenu.Designer.cs">
+      <DependentUpon>TelaMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaMeusDados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaMeusDados.Designer.cs">
+      <DependentUpon>TelaMeusDados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaRecuperarSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaRecuperarSenha.Designer.cs">
+      <DependentUpon>TelaRecuperarSenha.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="View\TelaAlterarMeusDados.resx">
+      <DependentUpon>TelaAlterarMeusDados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaCadastrar.resx">
+      <DependentUpon>TelaCadastrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaCancelarAgendamento.resx">
+      <DependentUpon>TelaCancelarAgendamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaConsultarAgendamento.resx">
+      <DependentUpon>TelaConsultarAgendamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaEntrar.resx">
+      <DependentUpon>TelaEntrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaFazerAgendamento2.resx">
+      <DependentUpon>TelaFazerAgendamento2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaMenu.resx">
+      <DependentUpon>TelaMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaMeusDados.resx">
+      <DependentUpon>TelaMeusDados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaRecuperarSenha.resx">
+      <DependentUpon>TelaRecuperarSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\man-sitting-on-sidewalk-while-reading-a-newspaper-3687511.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\man-seating-on-couch-1726074.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shallow-focus-photography-of-keychains-1194036.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\papiro.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rear-view-of-man-sitting-on-rock-by-sea-307008.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendario-abril-2020.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BancoSalaDeDescompressao.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="BancoSalaDeDescompressao_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>BancoSalaDeDescompressao.mdf</DependentUpon>
+    </Content>
+    <None Include="Resources\blue-and-brown-cave-painting-155009.jpg" />
+    <None Include="Resources\scenic-photo-of-an-antelope-canyon-1533511.jpg" />
+    <None Include="Resources\light-landscape-nature-red-33041.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
